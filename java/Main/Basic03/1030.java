@@ -1,4 +1,4 @@
-"// 1028과 동일
+// 1028과 동일
 import java.util.Scanner;
 
 public class Main {
@@ -14,4 +14,4 @@ public class Main {
   sc.close();
  }
 
-}"
+}
