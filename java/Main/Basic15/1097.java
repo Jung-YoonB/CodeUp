@@ -1,3 +1,5 @@
+package main;
+
 import java.util.Scanner;
 
 public class Main {
@@ -24,6 +26,7 @@ public class Main {
 			int y = sc.nextInt() - 1;
 			
 			for (int i = 0; i < board.length; i++) {
+				
 				// 행 뒤집기
 				if (board[x][i] == 0) {
 					board[x][i] = 1;
@@ -37,6 +40,12 @@ public class Main {
 				} else {
 					board[i][y] = 0;
 				}
+				
+				/* 삼항 연산자로 줄여보기
+				board[x][i] = (board[x][i] == 0) ? 1 : 0;
+				board[i][y] = (board[i][y] == 0) ? 1 : 0;
+				*/
+				
 			}
 		}
 		
