@@ -20,29 +20,24 @@ public class Main {
 		
 		// 뒤집을 좌표 입력 받고 뒤집기
 		for (int set = 0; set < reversCount; set++) {
-			int x = sc.nextInt();
-			int y = sc.nextInt();
+			int x = sc.nextInt() - 1;
+			int y = sc.nextInt() - 1;
 			
-			// 행 뒤집기
 			for (int i = 0; i < board.length; i++) {
-				if (board[x - 1][i] == 0) {
-					board[x - 1][i] = 1;
-					} else if (board[x - 1][i] == 1) {
-						board[x - 1][i] = 0;
-					}
+				// 행 뒤집기
+				if (board[x][i] == 0) {
+					board[x][i] = 1;
+				} else {					
+					board[x][i] = 0;
+				}
+				
+				// 열 뒤집기
+				if (board[i][y] == 0) {
+					board[i][y] = 1;
+				} else {
+					board[i][y] = 0;
+				}
 			}
-
-			
-			// 열 뒤집기
-			for (int i = 0; i < board.length; i++) {
-				if (board[i][y - 1] == 0) {
-					board[i][y - 1] = 1;
-					} else if (board[i][y - 1] == 1) {
-						board[i][y - 1] = 0;
-					}
-			}
-			
-			
 		}
 		
 		// 나열하기
@@ -52,7 +47,17 @@ public class Main {
 			}						
 			System.out.println();
 		}
-						
+		
+		// 항상된 for문 출력
+		/*
+		for (int[] row : board) {
+		 
+			for (int value : row) {
+				System.out.print(value + " ");
+			}
+			System.out.println();
+		}				
+		*/
 		
 		sc.close();
 	}
