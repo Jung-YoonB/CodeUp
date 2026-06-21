@@ -8,8 +8,7 @@ public class Main {
 		int num = sc.nextInt();
 		
 		for (int i = 1; i <= num; i++) {
-			boolean isX = (i == 3) || (i == 6) || (i == 9);
-						
+			boolean isX = (i == 3) || (i == 6) || (i == 9);						
 			if (isX) {
 				System.out.print("X ");
 			} else {			
